@@ -1,0 +1,6 @@
+[RabbitMQ]
+HOST=localhost
+PORT=5672
+USERNAME=podcast-ripper
+PASSWORD=podcast-ripper
+

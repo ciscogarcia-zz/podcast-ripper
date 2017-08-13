@@ -1,33 +1,40 @@
 #!/usr/bin/env python
-import daemon
+import configparser
 import urllib
 
+import daemon
+
+
 class PodcastRipper(object):
-    def start_server():
+    def start_server(self):
+        config = configparser.ConfigParser()
+        config.read("config")
+        
         while True:
-            new_episodes = check_for_new_episodes()
+            print("Hello")
+            new_episodes = self.check_for_new_episodes()
             if new_episodes:
-                download_new_episodes()
+                self.download_new_episodes()
 
-            new_podcasts = check_for_new_podcasts()
+            new_podcasts = self.check_for_new_podcasts()
             if new_podcasts:
-                download_new_podcasts()
-        pass
-
-    def check_for_new_episodes():
-        pass
-
-    def download_new_episodes():
+                self.download_new_podcasts()
+                
+    def check_for_new_episodes(self):
         pass
     
-    def check_for_new_podcasts():
+    def download_new_episodes(self):
         pass
-        
-    def download_new_podcasts():
+    
+    def check_for_new_podcasts(self):
         pass
-
-    def add_podcast_to_database():
+    
+    def download_new_podcasts(self):
+        pass
+    
+    def add_podcast_to_database(self):
         pass
 
 if __name__ == "__main__":    
-    print("True")
+    server = PodcastRipper()
+    server.start_server()
