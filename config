@@ -5,5 +5,9 @@ USERNAME=podcast-ripper
 PASSWORD=podcast-ripper
 
 [MongoDB]
-
+HOST=localhost
+PORT=27017
+DBNAME=podcast-ripper
+USERNAME=podcast-ripper
+PASSWORD=podcast-ripper
 

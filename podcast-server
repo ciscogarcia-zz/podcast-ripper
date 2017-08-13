@@ -22,6 +22,7 @@ class PodcastRipper(object):
 
             new_podcasts = self.check_for_new_podcasts()
             if new_podcasts:
+                self.add_podcasts_to_database(new_podcasts)
                 self.download_new_podcasts()
                 
     def check_for_new_episodes(self):
@@ -36,9 +37,10 @@ class PodcastRipper(object):
     def download_new_podcasts(self):
         pass
     
-    def add_podcast_to_database(self):
+    def add_podcasts_to_database(self):
         pass
 
 if __name__ == "__main__":    
     server = PodcastRipper()
-    server.start_server()
+    print repr(server)
+#    server.start_server()
